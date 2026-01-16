@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Check, ArrowRight } from "lucide-react";
+import { UserCheck, Briefcase, MessageSquare, FileText, Users, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { DotPattern } from "@/components/ui/dot-pattern";
 import { ShimmerButton } from "@/components/ui/shimmer-button";
@@ -11,11 +11,31 @@ import { AssessmentModal } from "@/components/landing/AssessmentModal";
 import { useState } from "react";
 
 const OFFERINGS = [
-    "Carefully chosen mentors to guide and support you",
-    "Job application support & referrals",
-    "Mock interview preparation",
-    "Resume prep and improvements",
-    "Community of likeminded engineers"
+    {
+        icon: UserCheck,
+        text: "Carefully chosen mentors to guide and support you",
+        color: "bg-blue-100 text-blue-600"
+    },
+    {
+        icon: Briefcase,
+        text: "Job application support & referrals",
+        color: "bg-orange-100 text-orange-600" 
+    },
+    {
+        icon: MessageSquare,
+        text: "Mock interview preparation",
+        color: "bg-green-100 text-green-600"
+    },
+    {
+        icon: FileText,
+        text: "Resume prep and improvements",
+        color: "bg-purple-100 text-purple-600"
+    },
+    {
+        icon: Users,
+        text: "Community of likeminded engineers",
+        color: "bg-pink-100 text-pink-600"
+    }
 ];
 
 export const Hero = () => {
@@ -75,25 +95,40 @@ export const Hero = () => {
                     </ShimmerButton>
                 </motion.div>
 
-                {/* Offerings List */}
+                {/* Offerings List / Bento Grid */}
                 <motion.div
                     initial={{ opacity: 0, scale: 0.95, y: 40 }}
                     animate={{ opacity: 1, scale: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.3 }}
-                    className="w-full mt-12 grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-4xl text-left"
+                    className="w-full mt-16 max-w-5xl"
                 >
-                    {OFFERINGS.map((item, i) => (
-                        <div key={i} className={cn(
-                            "flex items-center gap-3 p-4 rounded-xl border bg-white/50 backdrop-blur-sm",
-                            "border-slate-100 shadow-sm hover:shadow-md transition-all duration-300",
-                            i === OFFERINGS.length - 1 && OFFERINGS.length % 2 !== 0 ? "sm:col-span-2 sm:justify-center" : ""
-                        )}>
-                            <div className="flex-shrink-0 w-8 h-8 rounded-full bg-green-100 flex items-center justify-center">
-                                <Check className="w-5 h-5 text-green-600" />
+                    <div className="grid grid-cols-1 md:grid-cols-6 gap-4 text-left">
+                        {OFFERINGS.map((item, i) => (
+                            <div 
+                                key={i} 
+                                className={cn(
+                                    "group relative flex flex-col gap-4 p-6 rounded-2xl border bg-white/50 backdrop-blur-sm hover:bg-white transition-all duration-300",
+                                    "border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1",
+                                    // Bento Grid Layout Logic
+                                    // First 3 items span 2 columns each (3x2 = 6)
+                                    // Last 2 items span 3 columns each (2x3 = 6)
+                                    i < 3 ? "md:col-span-2" : "md:col-span-3"
+                                )}
+                            >
+                                <div className={cn(
+                                    "w-12 h-12 rounded-xl flex items-center justify-center transition-transform group-hover:scale-110",
+                                    item.color
+                                )}>
+                                    <item.icon className="w-6 h-6" />
+                                </div>
+                                <div>
+                                    <h3 className="font-semibold text-slate-900 text-lg leading-tight">
+                                        {item.text}
+                                    </h3>
+                                </div>
                             </div>
-                            <span className="text-slate-700 font-medium">{item}</span>
-                        </div>
-                    ))}
+                        ))}
+                    </div>
                 </motion.div>
             </div>
         </section>
