@@ -5,20 +5,20 @@ import { cn } from "@/lib/utils";
 
 export const FitCheck = () => {
   return (
-    <section className="py-24 bg-white">
+    <section className="py-24 bg-slate-50">
       <div className="container px-4 mx-auto max-w-5xl">
         <div className="mb-16 text-center">
             <h2 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
                 Who is Electi for?
             </h2>
           <p className="mt-4 text-lg text-slate-500">
-            We operate like a sports team, not a gym. We are selective because we want you to succeed.
+            We are selective because we want you to succeed.
           </p>
         </div>
 
         <div className="grid gap-6 md:grid-cols-2">
             {/* Good Fit Column */}
-            <div className="flex flex-col h-full p-8 border rounded-2xl border-zinc-200 bg-slate-50/50 hover:bg-slate-50 transition-colors">
+            <div className="flex flex-col h-full p-8 border rounded-2xl border-zinc-200 bg-white hover:bg-slate-50 transition-colors">
                 <div className="flex items-center gap-3 mb-8">
                     <div className="flex items-center justify-center w-10 h-10 rounded-full bg-slate-900 text-white shadow-sm">
                         <CheckCircle2 className="w-5 h-5" />

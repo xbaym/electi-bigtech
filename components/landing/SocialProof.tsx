@@ -17,7 +17,7 @@ const companies = [
 
 export const SocialProof = () => {
   return (
-    <section className="py-20 bg-white border-b border-slate-100/50">
+    <section className="py-20 bg-slate-50 border-b border-slate-100/50">
       <div className="container mx-auto px-4 mb-10 text-center">
         <div className="inline-flex px-6 py-3 bg-slate-900 rounded-full shadow-lg">
             <span className="text-base sm:text-lg font-bold text-white tracking-wide">

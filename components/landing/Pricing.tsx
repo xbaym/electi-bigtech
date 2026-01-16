@@ -11,7 +11,7 @@ export const Pricing = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
-    <section id="pricing" className="py-24 bg-slate-50">
+    <section id="pricing" className="py-24 bg-white">
       <AssessmentModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       <div className="container px-4 mx-auto max-w-5xl">
          <div className="mb-16 text-center">
