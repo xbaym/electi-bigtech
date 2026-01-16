@@ -28,7 +28,7 @@ export const Pricing = () => {
                         <span className="text-slate-500 ml-2">/month</span>
                     </div>
                     <CardDescription className="text-base text-slate-500 mt-2">
-                        Get full access to the AI simulator and training materials.
+                        Weekly mentorship sessions and AI-powered practice tools.
                     </CardDescription>
                 </CardHeader>
                 <CardContent className="flex-1">
@@ -36,19 +36,19 @@ export const Pricing = () => {
                     <ul className="space-y-4 text-sm text-slate-600">
                         <li className="flex items-center gap-2">
                             <Check className="w-4 h-4 text-slate-900" />
-                            Mock Interview Preparation
-                        </li>
-                        <li className="flex items-center gap-2">
-                            <Check className="w-4 h-4 text-slate-900" />
-                            System Design Practice
-                        </li>
-                        <li className="flex items-center gap-2">
-                            <Check className="w-4 h-4 text-slate-900" />
-                            24/7 Availability
+                            Bi-weekly Mentor Strategy Calls
                         </li>
                          <li className="flex items-center gap-2">
                             <Check className="w-4 h-4 text-slate-900" />
-                            Personalized Improvement Plans
+                            Direct Access to Mentor Group
+                        </li>
+                        <li className="flex items-center gap-2">
+                            <Check className="w-4 h-4 text-slate-900" />
+                            Unlimited AI Mock Interviews
+                        </li>
+                         <li className="flex items-center gap-2">
+                            <Check className="w-4 h-4 text-slate-900" />
+                            Custom Career Roadmap
                         </li>
                     </ul>
                 </CardContent>
