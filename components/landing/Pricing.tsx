@@ -36,11 +36,11 @@ export const Pricing = () => {
                     <ul className="space-y-4 text-sm text-slate-600">
                         <li className="flex items-center gap-2">
                             <Check className="w-4 h-4 text-slate-900" />
-                            Unlimited AI Mock Interviews
+                            Mock Interview Preparation
                         </li>
                         <li className="flex items-center gap-2">
                             <Check className="w-4 h-4 text-slate-900" />
-                            System Design Sandbox
+                            System Design Practice
                         </li>
                         <li className="flex items-center gap-2">
                             <Check className="w-4 h-4 text-slate-900" />

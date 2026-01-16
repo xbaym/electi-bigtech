@@ -1,26 +1,26 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Bot, CheckCircle, Send } from "lucide-react";
+import { Users, CheckCircle, Send, Map } from "lucide-react";
 
 export const HowItWorks = () => {
   const steps = [
     {
       id: "01",
-      title: "Train",
-      description: "Practice Coding & Behavioral questions with our ruthless AI agents.",
-      icon: <Bot className="w-6 h-6 text-slate-900" />,
+      title: "Personal Plan",
+      description: "Get a personalized roadmap to crack the interview.",
+      icon: <Map className="w-6 h-6 text-slate-900" />,
     },
     {
       id: "02",
-      title: "Validate",
-      description: "Pass the Mock Interview Exam to prove your skills.",
-      icon: <CheckCircle className="w-6 h-6 text-slate-900" />,
+      title: "Mentorship",
+      description: "Practice with engineers from top tech companies.",
+      icon: <Users className="w-6 h-6 text-slate-900" />,
     },
     {
       id: "03",
       title: "Get Referred",
-      description: "Our FAANG mentors push your profile directly to HR systems.",
+      description: "Our mentors push your profile directly to HR systems.",
       icon: <Send className="w-6 h-6 text-slate-900" />,
     },
   ];
