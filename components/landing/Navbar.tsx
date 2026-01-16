@@ -13,7 +13,7 @@ export const Navbar = () => {
   const links = [
     { name: "Product", href: "#product" },
     { name: "Pricing", href: "#pricing" },
-    { name: "Success Stories", href: "#stories" },
+    { name: "Who is Electi for?", href: "#who-is-electi-for" },
   ];
 
   return (

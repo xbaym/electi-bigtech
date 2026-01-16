@@ -17,7 +17,7 @@ export const Footer = () => {
           Ready to double your salary?
         </h2>
         <p className="max-w-xl mx-auto mb-10 text-lg text-slate-400">
-          Join 800+ engineers who have successfully transitioned to Big Tech companies using Electi.
+          Breaking in usually requires months of focused preparation, not shortcuts. Electi helps you structure that journey.
         </p>
         <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Button 
