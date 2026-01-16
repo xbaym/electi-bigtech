@@ -6,6 +6,7 @@ import { X, ArrowRight, Loader2, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { submitLead } from "@/actions/leads";
 
 interface AssessmentModalProps {
     isOpen: boolean;
@@ -25,21 +26,29 @@ export const AssessmentModal = ({ isOpen, onClose }: AssessmentModalProps) => {
         e.preventDefault();
         setIsLoading(true);
 
-        // Simulate API call
-        await new Promise(resolve => setTimeout(resolve, 1500));
+        const result = await submitLead({
+            fullName,
+            contact: telegram,
+            linkedin: linkedin || undefined
+        });
         
-        console.log({ fullName, telegram, linkedin });
         setIsLoading(false);
-        setIsSuccess(true);
-        
-        // Close after success message
-        setTimeout(() => {
-            onClose();
-            setIsSuccess(false);
-            setFullName("");
-            setTelegram("");
-            setLinkedin("");
-        }, 2000);
+
+        if (result.success) {
+            setIsSuccess(true);
+            
+            // Close after success message
+            setTimeout(() => {
+                onClose();
+                setIsSuccess(false);
+                setFullName("");
+                setTelegram("");
+                setLinkedin("");
+            }, 2000);
+        } else {
+            console.error("Submission failed:", result.error);
+            // Optionally handle error UI here
+        }
     };
 
     return (

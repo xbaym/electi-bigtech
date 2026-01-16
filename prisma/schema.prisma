@@ -19,3 +19,11 @@ model Profile {
   // This maps to the Supabase Auth user ID
   userId    String   @unique
 }
+
+model Lead {
+  id        String   @id @default(uuid())
+  fullName  String
+  contact   String   // Telegram or Phone
+  linkedin  String?
+  createdAt DateTime @default(now())
+}
