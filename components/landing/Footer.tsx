@@ -25,7 +25,7 @@ export const Footer = () => {
                 className="h-12 px-8 text-base font-semibold bg-white text-slate-900 hover:bg-slate-100"
                 onClick={() => setIsModalOpen(true)}
             >
-                Join the Waitlist
+                Start Training Now
             </Button>
         </div>
       </div>
