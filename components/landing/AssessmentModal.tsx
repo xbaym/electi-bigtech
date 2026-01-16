@@ -104,12 +104,12 @@ export const AssessmentModal = ({ isOpen, onClose }: AssessmentModalProps) => {
                                             </div>
 
                                             <div className="space-y-2">
-                                                <Label htmlFor="telegram">Telegram Account</Label>
+                                                <Label htmlFor="telegram">Telegram or Phone Number</Label>
                                                 <Input 
                                                     id="telegram"
                                                     value={telegram}
                                                     onChange={(e) => setTelegram(e.target.value)}
-                                                    placeholder="@username"
+                                                    placeholder="@username or +1 234..."
                                                     required
                                                     className="h-11"
                                                 />

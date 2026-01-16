@@ -47,7 +47,9 @@ export const HowItWorks = () => {
                         {/* Content */}
                         <div className={`flex-1 text-center ${index % 2 !== 0 ? 'md:text-left' : 'md:text-right'}`}>
                              <h3 className="text-2xl font-bold text-slate-900 mb-2">{step.title}</h3>
-                             <p className="text-slate-500 max-w-xs mx-auto md:mx-0">{step.description}</p>
+                             <p className={`text-slate-500 max-w-xs mx-auto ${index % 2 !== 0 ? 'md:mx-0' : 'md:ml-auto md:mr-0'}`}>
+                                {step.description}
+                             </p>
                         </div>
                         
                         {/* Number/Icon */}
