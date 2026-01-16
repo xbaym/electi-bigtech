@@ -2,6 +2,7 @@ import { Navbar } from "@/components/landing/Navbar";
 import { Hero } from "@/components/landing/Hero";
 import { SocialProof } from "@/components/landing/SocialProof";
 import { HowItWorks } from "@/components/landing/HowItWorks";
+import { FitCheck } from "@/components/landing/FitCheck";
 import { Pricing } from "@/components/landing/Pricing";
 import { Footer } from "@/components/landing/Footer";
 
@@ -12,6 +13,7 @@ export default function Home() {
       <Hero />
       <SocialProof />
       <HowItWorks />
+      <FitCheck />
       <Pricing />
       <Footer />
     </main>
