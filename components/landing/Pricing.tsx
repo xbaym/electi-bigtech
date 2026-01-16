@@ -4,10 +4,15 @@ import { Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
+import { AssessmentModal } from "@/components/landing/AssessmentModal";
+import { useState } from "react";
 
 export const Pricing = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <section id="pricing" className="py-24 bg-slate-50">
+      <AssessmentModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       <div className="container px-4 mx-auto max-w-5xl">
          <div className="mb-16 text-center">
            <h2 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
@@ -53,7 +58,10 @@ export const Pricing = () => {
                     </ul>
                 </CardContent>
                 <CardFooter>
-                    <Button className="w-full h-12 text-base font-semibold bg-slate-900 hover:bg-slate-800">
+                    <Button 
+                        className="w-full h-12 text-base font-semibold bg-slate-900 hover:bg-slate-800"
+                        onClick={() => setIsModalOpen(true)}
+                    >
                         Start Training Now
                     </Button>
                 </CardFooter>
@@ -93,7 +101,11 @@ export const Pricing = () => {
                     </ul>
                 </CardContent>
                 <CardFooter>
-                     <Button variant="outline" className="w-full h-12 text-base font-semibold bg-white text-slate-900 hover:bg-slate-100 border-white hover:text-slate-900">
+                     <Button 
+                        variant="outline" 
+                        className="w-full h-12 text-base font-semibold bg-white text-slate-900 hover:bg-slate-100 border-white hover:text-slate-900"
+                        onClick={() => setIsModalOpen(true)}
+                    >
                         Join Waitlist
                     </Button>
                 </CardFooter>
