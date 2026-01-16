@@ -1,11 +1,16 @@
 "use client";
 
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { AssessmentModal } from "@/components/landing/AssessmentModal";
 
 export const Footer = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <footer className="bg-slate-900 border-t border-slate-800">
+      <AssessmentModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       {/* CTA Section */}
       <div className="container px-4 py-24 mx-auto text-center">
         <h2 className="text-4xl font-bold tracking-tight text-white mb-6">
@@ -15,11 +20,12 @@ export const Footer = () => {
           Join 800+ engineers who have successfully transitioned to Big Tech companies using Electi.
         </p>
         <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <Button size="lg" className="h-12 px-8 text-base font-semibold bg-white text-slate-900 hover:bg-slate-100">
+            <Button 
+                size="lg" 
+                className="h-12 px-8 text-base font-semibold bg-white text-slate-900 hover:bg-slate-100"
+                onClick={() => setIsModalOpen(true)}
+            >
                 Join the Waitlist
-            </Button>
-            <Button variant="ghost" size="lg" className="h-12 px-8 text-base text-slate-300 hover:text-white hover:bg-slate-800">
-                Contact Sales
             </Button>
         </div>
       </div>
