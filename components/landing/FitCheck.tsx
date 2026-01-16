@@ -5,96 +5,89 @@ import { cn } from "@/lib/utils";
 
 export const FitCheck = () => {
   return (
-    <section className="py-24 bg-slate-50">
-      <div className="container px-4 mx-auto max-w-6xl">
+    <section className="py-24 bg-white">
+      <div className="container px-4 mx-auto max-w-5xl">
         <div className="mb-16 text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
-            Is Electi right for you?
-          </h2>
+            <h2 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+                Who is Electi for?
+            </h2>
           <p className="mt-4 text-lg text-slate-500">
-            We are selective because we want you to succeed.
+            We operate like a sports team, not a gym. We are selective because we want you to succeed.
           </p>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-2">
-          {/* Good Fit Column */}
-          <div className="p-8 bg-white border rounded-2xl border-green-100 shadow-sm relative overflow-hidden">
-             <div className="absolute top-0 right-0 p-4 opacity-5">
-                <CheckCircle2 className="w-64 h-64 text-green-500" />
-             </div>
-             <div className="relative z-10">
-                <div className="flex items-center gap-3 mb-6">
-                    <div className="p-2 bg-green-100 rounded-full">
-                        <CheckCircle2 className="w-6 h-6 text-green-600" />
+        <div className="grid gap-6 md:grid-cols-2">
+            {/* Good Fit Column */}
+            <div className="flex flex-col h-full p-8 border rounded-2xl border-zinc-200 bg-slate-50/50 hover:bg-slate-50 transition-colors">
+                <div className="flex items-center gap-3 mb-8">
+                    <div className="flex items-center justify-center w-10 h-10 rounded-full bg-slate-900 text-white shadow-sm">
+                        <CheckCircle2 className="w-5 h-5" />
                     </div>
                     <h3 className="text-xl font-bold text-slate-900">Electi is a good fit if you:</h3>
                 </div>
                 
-                <ul className="space-y-4 text-slate-600">
+                <ul className="space-y-4 mb-8 flex-1">
                     {[
                         "Have 1+ year of professional software engineering experience",
                         "Are targeting Big Tech roles (Google, Meta, Amazon, etc.)",
                         "Can commit 10–15 hours per week to preparation",
-                        "Are ready to prepare for 3–6 months (typical for Big Tech)"
+                        "Are ready to prepare for 3–6 months"
                     ].map((item, i) => (
-                        <li key={i} className="flex gap-3">
-                            <CheckCircle2 className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
-                            <span>{item}</span>
+                        <li key={i} className="flex items-start gap-3 text-slate-600">
+                            <CheckCircle2 className="w-5 h-5 text-slate-900 flex-shrink-0 mt-0.5" />
+                            <span className="leading-relaxed">{item}</span>
                         </li>
                     ))}
                 </ul>
 
-                <div className="mt-8 pt-8 border-t border-slate-100">
-                    <p className="font-semibold text-slate-900 mb-4">Are willing to:</p>
-                    <ul className="space-y-3 text-slate-600">
+                <div className="pt-6 border-t border-slate-200">
+                    <p className="font-semibold text-slate-900 mb-4">You are willing to:</p>
+                    <ul className="space-y-3">
                         {[
-                            "Solve 150–300 coding problems (LeetCode-style)",
-                            "Practice system design weekly (for mid/senior levels)",
+                            "Solve 150–300 coding problems",
+                            "Practice system design weekly",
                             "Do mock interviews and iterate on feedback"
                         ].map((item, i) => (
-                            <li key={i} className="flex gap-3">
-                                <div className="w-1.5 h-1.5 rounded-full bg-green-400 mt-2.5 flex-shrink-0" />
+                            <li key={i} className="flex items-center gap-3 text-sm text-slate-600">
+                                <div className="w-1.5 h-1.5 rounded-full bg-slate-400" />
                                 <span>{item}</span>
                             </li>
                         ))}
                     </ul>
                 </div>
-                
-                <div className="mt-6 p-4 bg-green-50 rounded-xl border border-green-100 text-sm text-green-800 italic">
-                    📌 This is how most successful Google / Meta candidates actually prepare.
-                </div>
             </div>
-          </div>
 
-          {/* Not Good Fit Column */}
-          <div className="p-8 bg-white border rounded-2xl border-red-100 shadow-sm relative overflow-hidden">
-             <div className="absolute top-0 right-0 p-4 opacity-5">
-                <XCircle className="w-64 h-64 text-red-500" />
-             </div>
-             <div className="relative z-10">
-                <div className="flex items-center gap-3 mb-6">
-                    <div className="p-2 bg-red-100 rounded-full">
-                        <XCircle className="w-6 h-6 text-red-600" />
+            {/* Not Good Fit Column */}
+            <div className="flex flex-col h-full p-8 border rounded-2xl border-zinc-200 bg-white">
+                <div className="flex items-center gap-3 mb-8">
+                    <div className="flex items-center justify-center w-10 h-10 rounded-full bg-white border border-slate-200 text-slate-400">
+                        <XCircle className="w-5 h-5" />
                     </div>
-                    <h3 className="text-xl font-bold text-slate-900">Electi is NOT a good fit if you:</h3>
+                    <h3 className="text-xl font-bold text-slate-500">Electi is NOT a good fit if you:</h3>
                 </div>
 
-                <ul className="space-y-4 text-slate-600">
+                <ul className="space-y-4">
                     {[
                         "Expect to get hired in 2–3 weeks",
                         "Want a guaranteed offer or referral without preparation",
                         "Are not ready to invest months of consistent effort",
-                        "Are “just curious” about Big Tech but not fully committed",
+                        "Are “just curious” but not fully committed",
                         "Are looking for shortcuts instead of skill-building"
                     ].map((item, i) => (
-                        <li key={i} className="flex gap-3">
-                            <XCircle className="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" />
-                            <span>{item}</span>
+                        <li key={i} className="flex items-start gap-3 text-slate-500">
+                            <XCircle className="w-5 h-5 text-slate-300 flex-shrink-0 mt-0.5" />
+                            <span className="leading-relaxed">{item}</span>
                         </li>
                     ))}
                 </ul>
-             </div>
-          </div>
+            </div>
+        </div>
+        
+        <div className="mt-12 text-center">
+             <div className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-slate-600 bg-slate-50 rounded-full border border-slate-200">
+                <span className="flex w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+                This is how most successful Google / Meta candidates actually prepare.
+            </div>
         </div>
       </div>
     </section>
