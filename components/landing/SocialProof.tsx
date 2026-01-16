@@ -33,7 +33,7 @@ export const SocialProof = () => {
               key={company}
               className={cn(
                 "mx-8 flex items-center justify-center",
-                "text-2xl font-bold text-slate-300 select-none grayscale opacity-50 hover:opacity-100 hover:grayscale-0 transition-all duration-300 cursor-pointer"
+                "text-3xl font-bold text-slate-600 select-none transition-colors duration-300 hover:text-slate-900 cursor-pointer"
               )}
             >
               {company}
@@ -42,8 +42,8 @@ export const SocialProof = () => {
         </Marquee>
         
         {/* Gradients to fade edges */}
-        <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-white dark:from-background"></div>
-        <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white dark:from-background"></div>
+        <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-slate-50 dark:from-background"></div>
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-slate-50 dark:from-background"></div>
       </div>
     </section>
   );
